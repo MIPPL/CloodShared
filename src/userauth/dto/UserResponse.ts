@@ -17,14 +17,13 @@ class UserResponseDto {
 }
 
 class UserDataResponseDto extends UserBaseRecord {
-  
   userId: number;
   createTime: string;
   lastLoginTime: string;
   lastLoginIp: string;
 
-  setAsEmpty(): void {
-    super.setAsEmpty();
+  constructor() {
+    super();
     this.userId = 0;
     this.createTime = "";
     this.lastLoginTime = "";

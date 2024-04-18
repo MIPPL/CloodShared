@@ -13,14 +13,12 @@ exports.UserBaseRecord = exports.InputUserRequestDto = void 0;
 var class_validator_1 = require("class-validator");
 var UserBaseRecord = (function () {
     function UserBaseRecord() {
-    }
-    UserBaseRecord.prototype.setAsEmpty = function () {
         this.username = "";
         this.email = "";
         this.phone = "";
         this.firstname = "";
         this.lastname = "";
-    };
+    }
     __decorate([
         (0, class_validator_1.IsString)(),
         (0, class_validator_1.IsOptional)(),

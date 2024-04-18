@@ -1,7 +1,6 @@
 import { IsString, IsOptional, IsEmail, IsPhoneNumber } from "class-validator";
 
 class ValidateUserRequestDto {
-
   @IsString()
   @IsOptional()
   username: string;
@@ -24,7 +23,6 @@ class ValidateUserRequestDto {
 }
 
 class ValidateUserResponseDto {
-
   validate: boolean;
   field: string;
   token: string;

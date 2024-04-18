@@ -1,6 +1,5 @@
 // export dummy function for testing
 
-const dummy = () => {
-}
+const dummy = () => {};
 
 export { dummy };

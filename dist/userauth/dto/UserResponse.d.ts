@@ -10,6 +10,6 @@ declare class UserDataResponseDto extends UserBaseRecord {
     createTime: string;
     lastLoginTime: string;
     lastLoginIp: string;
-    setAsEmpty(): void;
+    constructor();
 }
 export { UserResponseDto, UserDataResponseDto };

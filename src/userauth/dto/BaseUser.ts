@@ -7,11 +7,9 @@ import {
 } from "class-validator";
 
 class UserBaseRecord {
-  
-
-@IsString()
-@IsOptional()
-username: string;
+  @IsString()
+  @IsOptional()
+  username: string;
 
   @IsEmail()
   email: string;
@@ -26,7 +24,7 @@ username: string;
   @IsString()
   lastname: string;
 
-  setAsEmpty(): void {
+  constructor() {
     this.username = "";
     this.email = "";
     this.phone = "";
@@ -36,7 +34,6 @@ username: string;
 }
 
 class InputUserRequestDto {
-
   @IsNumberString()
   id: string;
 }

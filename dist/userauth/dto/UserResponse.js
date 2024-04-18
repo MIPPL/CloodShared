@@ -32,14 +32,12 @@ exports.UserResponseDto = UserResponseDto;
 var UserDataResponseDto = (function (_super) {
     __extends(UserDataResponseDto, _super);
     function UserDataResponseDto() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this) || this;
+        _this.userId = 0;
+        _this.createTime = "";
+        _this.lastLoginTime = "";
+        return _this;
     }
-    UserDataResponseDto.prototype.setAsEmpty = function () {
-        _super.prototype.setAsEmpty.call(this);
-        this.userId = 0;
-        this.createTime = "";
-        this.lastLoginTime = "";
-    };
     return UserDataResponseDto;
 }(BaseUser_1.UserBaseRecord));
 exports.UserDataResponseDto = UserDataResponseDto;

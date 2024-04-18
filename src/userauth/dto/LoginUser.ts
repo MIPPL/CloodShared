@@ -9,7 +9,6 @@ class LoginUserRequestDto {
 }
 
 class LoginUserResponseDto {
-  
   token: string;
   error_code: string;
   error_message: string;

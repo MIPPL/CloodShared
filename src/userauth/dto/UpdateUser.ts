@@ -7,7 +7,6 @@ import {
 } from "class-validator";
 
 class UpdateUserRequestDto {
-  
   @IsNumberString()
   id: string;
 
