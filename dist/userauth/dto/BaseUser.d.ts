@@ -1,7 +1,7 @@
 declare class UserBaseRecord {
     username: string;
     email: string;
-    phone: string;
+    phone?: string;
     firstname: string;
     lastname: string;
 }
