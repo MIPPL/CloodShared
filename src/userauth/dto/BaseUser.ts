@@ -23,14 +23,6 @@ class UserBaseRecord {
 
   @IsString()
   lastname: string;
-
-  constructor() {
-    this.username = "";
-    this.email = "";
-    this.phone = "";
-    this.firstname = "";
-    this.lastname = "";
-  }
 }
 
 class InputUserRequestDto {

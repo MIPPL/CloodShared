@@ -18,13 +18,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserDataResponseDto = exports.UserResponseDto = void 0;
 var BaseUser_1 = require("./BaseUser");
 var UserResponseDto = (function () {
-    function UserResponseDto(userId, error_code, error_message) {
-        if (userId === void 0) { userId = 0; }
-        if (error_code === void 0) { error_code = ""; }
-        if (error_message === void 0) { error_message = ""; }
-        this.userId = userId;
-        this.error_code = error_code;
-        this.error_message = error_message;
+    function UserResponseDto() {
     }
     return UserResponseDto;
 }());
@@ -32,11 +26,7 @@ exports.UserResponseDto = UserResponseDto;
 var UserDataResponseDto = (function (_super) {
     __extends(UserDataResponseDto, _super);
     function UserDataResponseDto() {
-        var _this = _super.call(this) || this;
-        _this.userId = 0;
-        _this.createTime = "";
-        _this.lastLoginTime = "";
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return UserDataResponseDto;
 }(BaseUser_1.UserBaseRecord));

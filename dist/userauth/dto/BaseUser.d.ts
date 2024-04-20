@@ -4,7 +4,6 @@ declare class UserBaseRecord {
     phone: string;
     firstname: string;
     lastname: string;
-    constructor();
 }
 declare class InputUserRequestDto {
     id: string;

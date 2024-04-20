@@ -1,12 +1,13 @@
 {
   "name": "cloodshared",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
     "build": "npx tsc",
+	"build:install": "chmod 755 build_install.sh && ./build_install.sh",
     "lint": "eslint --ext .js,.ts",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts)\"",
     "test": "echo \"Error: no test specified\" && exit 1"
