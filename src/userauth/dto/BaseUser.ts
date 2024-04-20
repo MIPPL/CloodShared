@@ -16,7 +16,7 @@ class UserBaseRecord {
 
   @IsPhoneNumber()
   @IsOptional()
-  phone: string;
+  phone?: string;
 
   @IsString()
   firstname: string;
