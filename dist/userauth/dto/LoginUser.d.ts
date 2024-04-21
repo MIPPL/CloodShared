@@ -1,5 +1,6 @@
 declare class LoginUserRequestDto {
-    email: string;
+    username?: string;
+    email?: string;
     password: string;
 }
 declare class LoginUserResponseDto {

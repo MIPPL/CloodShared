@@ -20,4 +20,5 @@ cd ../CloodFrontend
 npm install git+https://github.com/MIPPL/CloodShared.git
 cd ../CloodBackend
 npm install npm install git+https://github.com/MIPPL/CloodShared.git
+cd ..
 

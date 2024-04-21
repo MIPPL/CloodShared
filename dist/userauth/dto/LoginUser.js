@@ -15,6 +15,12 @@ var LoginUserRequestDto = (function () {
     function LoginUserRequestDto() {
     }
     __decorate([
+        (0, class_validator_1.ValidateIf)(function (o) { return o.email === null || o.email === undefined; }),
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], LoginUserRequestDto.prototype, "username", void 0);
+    __decorate([
+        (0, class_validator_1.ValidateIf)(function (o) { return o.username === null || o.username === undefined; }),
         (0, class_validator_1.IsEmail)(),
         __metadata("design:type", String)
     ], LoginUserRequestDto.prototype, "email", void 0);
