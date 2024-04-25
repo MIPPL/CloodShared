@@ -1,6 +1,7 @@
 import { UserBaseRecord } from "./BaseUser";
 declare class CreateUserRequestDto extends UserBaseRecord {
     password: string;
+    confirm_password: string;
 }
 declare class CreateUserResponseDto {
     userId: number;

@@ -27,16 +27,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateUserResponseDto = exports.CreateUserRequestDto = void 0;
 var class_validator_1 = require("class-validator");
 var BaseUser_1 = require("./BaseUser");
+var strongPasswordOptions = {
+    minLength: 8,
+    minLowercase: 1,
+    minUppercase: 1,
+    minNumbers: 1,
+    minSymbols: 1,
+};
 var CreateUserRequestDto = (function (_super) {
     __extends(CreateUserRequestDto, _super);
     function CreateUserRequestDto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
+        (0, class_validator_1.IsStrongPassword)(strongPasswordOptions),
         (0, class_validator_1.IsNotEmpty)(),
         (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], CreateUserRequestDto.prototype, "password", void 0);
+    __decorate([
+        (0, class_validator_1.ValidateIf)(function (o) { return o.password === o.confirm_password; }),
+        (0, class_validator_1.IsNotEmpty)(),
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], CreateUserRequestDto.prototype, "confirm_password", void 0);
     return CreateUserRequestDto;
 }(BaseUser_1.UserBaseRecord));
 exports.CreateUserRequestDto = CreateUserRequestDto;
