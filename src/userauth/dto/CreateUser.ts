@@ -1,7 +1,8 @@
-import { IsString } from "class-validator";
+import { IsString, IsNotEmpty } from "class-validator";
 import { UserBaseRecord } from "./BaseUser";
 
 class CreateUserRequestDto extends UserBaseRecord {
+  @IsNotEmpty()
   @IsString()
   password: string;
 }
