@@ -3,8 +3,9 @@ import {
   IsNotEmpty,
   IsStrongPassword,
   IsStrongPasswordOptions,
-  ValidateIf,
 } from "class-validator";
+import { Match } from "../../decorator/match";
+
 import { UserBaseRecord } from "./BaseUser";
 
 const strongPasswordOptions = {
@@ -21,7 +22,7 @@ class CreateUserRequestDto extends UserBaseRecord {
   @IsString()
   password: string;
 
-  @ValidateIf((o) => o.password === o.confirm_password)
+  @Match("password")
   @IsNotEmpty()
   @IsString()
   confirm_password: string;
