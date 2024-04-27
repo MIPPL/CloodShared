@@ -26,6 +26,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateUserResponseDto = exports.CreateUserRequestDto = void 0;
 var class_validator_1 = require("class-validator");
+var match_1 = require("../../decorator/match");
 var BaseUser_1 = require("./BaseUser");
 var strongPasswordOptions = {
     minLength: 8,
@@ -46,7 +47,7 @@ var CreateUserRequestDto = (function (_super) {
         __metadata("design:type", String)
     ], CreateUserRequestDto.prototype, "password", void 0);
     __decorate([
-        (0, class_validator_1.ValidateIf)(function (o) { return o.password === o.confirm_password; }),
+        (0, match_1.Match)("password"),
         (0, class_validator_1.IsNotEmpty)(),
         (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
