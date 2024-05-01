@@ -1,2 +1,2 @@
 export * from "./userauth";
-export * from "./metadata";
+export * from "./meta";
