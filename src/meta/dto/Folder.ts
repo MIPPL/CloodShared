@@ -1,56 +1,21 @@
-import { IsString, IsNotEmpty, IsNumber, IsOptional } from "class-validator";
+import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
+import { FileRecordDto } from "./File";
 
-class FolderRecordDto {
-  id: number;
-  parent_id: number;
-  owner_id: number;
-  name: string;
-  path: string;
-  created_at: Date;
-  modified_at: Date;
+
+class FolderRecordDto extends NodeRecordDto {
+	child_folders?: FolderRecordDto[];
+	child_files?: FileRecordDto[];
 }
 
-class CreateFolderRequestDto {
-  @IsNumber()
-  @IsOptional()
-  parent_id: number;
-
-  @IsNumber()
-  owner_id: number;
-
-  @IsString()
-  @IsNotEmpty()
-  name: string;
-}
-
-class UpdateFolderRequestDto {
-  @IsNumber()
-  folder_id: number;
-
-  @IsNumber()
-  @IsOptional()
-  parent_id: number;
-
-  @IsString()
-  @IsNotEmpty()
-  name: string;
-}
-
-class ActionFolderResponseDto {
-  folder_id: number;
-  error_code: string;
-  error_message: string;
-}
-
-class SingleFolderRequestDto {
-  @IsNumber()
-  folder_id: number;
-}
+type CreateFolderRequestDto = typeof CreateNodeRequestDto;
+type UpdateFolderRequestDto = typeof UpdateNodeRequestDto;
+type ActionFolderResponseDto = typeof ActionNodeResponseDto;
+type SingleFolderRequestDto = typeof SingleNodeRequestDto;
 
 export {
   FolderRecordDto,
   CreateFolderRequestDto,
   ActionFolderResponseDto,
   UpdateFolderRequestDto,
-  SingleFolderRequestDto,
+  SingleFolderRequestDto
 };
