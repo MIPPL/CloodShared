@@ -4,8 +4,12 @@ declare class FolderRecordDto extends NodeRecordDto {
     child_folders?: FolderRecordDto[];
     child_files?: FileRecordDto[];
 }
-type CreateFolderRequestDto = typeof CreateNodeRequestDto;
-type UpdateFolderRequestDto = typeof UpdateNodeRequestDto;
-type ActionFolderResponseDto = typeof ActionNodeResponseDto;
-type SingleFolderRequestDto = typeof SingleNodeRequestDto;
+declare class CreateFolderRequestDto extends CreateNodeRequestDto {
+}
+declare class UpdateFolderRequestDto extends UpdateNodeRequestDto {
+}
+declare class ActionFolderResponseDto extends ActionNodeResponseDto {
+}
+declare class SingleFolderRequestDto extends SingleNodeRequestDto {
+}
 export { FolderRecordDto, CreateFolderRequestDto, ActionFolderResponseDto, UpdateFolderRequestDto, SingleFolderRequestDto, };

@@ -12,10 +12,10 @@ class FolderRecordDto extends NodeRecordDto {
   child_files?: FileRecordDto[];
 }
 
-class CreateFolderRequestDto extends CreateNodeRequestDto	{}
-class UpdateFolderRequestDto extends  UpdateNodeRequestDto	{}
-class ActionFolderResponseDto extends  ActionNodeResponseDto	{}
-class SingleFolderRequestDto extends  SingleNodeRequestDto	{}
+class CreateFolderRequestDto extends CreateNodeRequestDto {}
+class UpdateFolderRequestDto extends UpdateNodeRequestDto {}
+class ActionFolderResponseDto extends ActionNodeResponseDto {}
+class SingleFolderRequestDto extends SingleNodeRequestDto {}
 
 export {
   FolderRecordDto,

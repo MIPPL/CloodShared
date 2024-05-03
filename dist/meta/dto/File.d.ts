@@ -12,6 +12,8 @@ declare class CreateFileRequestDto extends CreateNodeRequestDto {
     size_bytes: number;
     hash: string;
 }
-type UpdateFileRequestDto = typeof UpdateNodeRequestDto;
-type SingleFileRequestDto = typeof SingleNodeRequestDto;
+declare class UpdateFileRequestDto extends UpdateNodeRequestDto {
+}
+declare class SingleFileRequestDto extends SingleNodeRequestDto {
+}
 export { FileRecordDto, CreateFileRequestDto, UpdateFileRequestDto, SingleFileRequestDto, };
