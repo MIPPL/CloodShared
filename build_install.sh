@@ -19,6 +19,14 @@ git push origin $(node -p -e "require('./package.json').version")
 cd ../CloodFrontend
 npm install git+https://github.com/MIPPL/CloodShared.git
 cd ../CloodBackend
-npm install npm install git+https://github.com/MIPPL/CloodShared.git
-cd ..
+npm install git+https://github.com/MIPPL/CloodShared.git
+
+# for some reason (probably due to the way lerna treats npm packages) the prisma client for individual 
+# monorepo packages dissappear after installing/updating npm packages
+# we must then recreate the prisma client for each individual monorepo package
+cd ./packages/user-auth-service
+npx prisma migrate dev
+cd ../meta-service
+npx prisma migrate dev
+cd ../../../CloodShared
 
