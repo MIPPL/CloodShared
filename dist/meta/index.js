@@ -15,3 +15,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./dto/Folder"), exports);
+__exportStar(require("./dto/File"), exports);
+__exportStar(require("./dto/Node"), exports);
+__exportStar(require("./dto/Block"), exports);
