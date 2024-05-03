@@ -1,28 +1,11 @@
-declare class FolderRecordDto {
-    id: number;
-    parent_id: number;
-    owner_id: number;
-    name: string;
-    path: string;
-    created_at: Date;
-    modified_at: Date;
+import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
+import { FileRecordDto } from "./File";
+declare class FolderRecordDto extends NodeRecordDto {
+    child_folders?: FolderRecordDto[];
+    child_files?: FileRecordDto[];
 }
-declare class CreateFolderRequestDto {
-    parent_id: number;
-    owner_id: number;
-    name: string;
-}
-declare class UpdateFolderRequestDto {
-    folder_id: number;
-    parent_id: number;
-    name: string;
-}
-declare class ActionFolderResponseDto {
-    folder_id: number;
-    error_code: string;
-    error_message: string;
-}
-declare class SingleFolderRequestDto {
-    folder_id: number;
-}
+type CreateFolderRequestDto = typeof CreateNodeRequestDto;
+type UpdateFolderRequestDto = typeof UpdateNodeRequestDto;
+type ActionFolderResponseDto = typeof ActionNodeResponseDto;
+type SingleFolderRequestDto = typeof SingleNodeRequestDto;
 export { FolderRecordDto, CreateFolderRequestDto, ActionFolderResponseDto, UpdateFolderRequestDto, SingleFolderRequestDto, };

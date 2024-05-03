@@ -1,10 +1,15 @@
-import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
+import {
+  ActionNodeResponseDto,
+  CreateNodeRequestDto,
+  NodeRecordDto,
+  SingleNodeRequestDto,
+  UpdateNodeRequestDto,
+} from "./Node";
 import { FileRecordDto } from "./File";
 
-
 class FolderRecordDto extends NodeRecordDto {
-	child_folders?: FolderRecordDto[];
-	child_files?: FileRecordDto[];
+  child_folders?: FolderRecordDto[];
+  child_files?: FileRecordDto[];
 }
 
 type CreateFolderRequestDto = typeof CreateNodeRequestDto;
@@ -17,5 +22,5 @@ export {
   CreateFolderRequestDto,
   ActionFolderResponseDto,
   UpdateFolderRequestDto,
-  SingleFolderRequestDto
+  SingleFolderRequestDto,
 };

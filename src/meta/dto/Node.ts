@@ -1,4 +1,10 @@
-import { IsString, IsNotEmpty, IsNumber, IsOptional, IsBoolean } from "class-validator";
+import {
+  IsString,
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsBoolean,
+} from "class-validator";
 
 class NodeRecordDto {
   id: number;
@@ -69,5 +75,5 @@ export {
   CreateNodeRequestDto,
   ActionNodeResponseDto,
   UpdateNodeRequestDto,
-  SingleNodeRequestDto
+  SingleNodeRequestDto,
 };

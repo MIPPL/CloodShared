@@ -1,5 +1,10 @@
 import { IsString, IsNumber } from "class-validator";
-import { CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
+import {
+  CreateNodeRequestDto,
+  NodeRecordDto,
+  SingleNodeRequestDto,
+  UpdateNodeRequestDto,
+} from "./Node";
 
 class FileRecordDto extends NodeRecordDto {
   size_bytes: number;
@@ -8,7 +13,6 @@ class FileRecordDto extends NodeRecordDto {
   mime_type: string;
   total_blocks: number;
   uploaded_blocks: number;
-
 }
 
 class CreateFileRequestDto extends CreateNodeRequestDto {
@@ -24,10 +28,10 @@ class CreateFileRequestDto extends CreateNodeRequestDto {
 
 type UpdateFileRequestDto = typeof UpdateNodeRequestDto;
 type SingleFileRequestDto = typeof SingleNodeRequestDto;
-  
+
 export {
-	FileRecordDto,
-	CreateFileRequestDto,
-	UpdateFileRequestDto,
-	SingleFileRequestDto
+  FileRecordDto,
+  CreateFileRequestDto,
+  UpdateFileRequestDto,
+  SingleFileRequestDto,
 };

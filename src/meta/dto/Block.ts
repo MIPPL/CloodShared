@@ -4,10 +4,10 @@ class BlockRecordDto {
   id_block: number;
   size_bytes: number;
   hash: string;
-  uploaded_bytes: number; 
+  uploaded_bytes: number;
 }
 
-class FileBlockRecordDto extends BlockRecordDto{
+class FileBlockRecordDto extends BlockRecordDto {
   id_file: number;
   id_block: number;
   order: number;
@@ -29,10 +29,10 @@ class CreateFileBlockRequestDto {
 }
 
 class CreateFileBlockResponseDto {
-	id_block: number;
-	error_code: string;
-	error_message: string;
-	already_exists: boolean;
+  id_block: number;
+  error_code: string;
+  error_message: string;
+  already_exists: boolean;
 }
 
 class UpdateBlockRequestDto {
@@ -47,13 +47,13 @@ class ActionBlockResponseDto {
   id_block: number;
   error_code: string;
   error_message: string;
-} 
+}
 
 export {
-	BlockRecordDto,
-	FileBlockRecordDto,
-	CreateFileBlockRequestDto,
-	CreateFileBlockResponseDto,
-	UpdateBlockRequestDto,
-	ActionBlockResponseDto
+  BlockRecordDto,
+  FileBlockRecordDto,
+  CreateFileBlockRequestDto,
+  CreateFileBlockResponseDto,
+  UpdateBlockRequestDto,
+  ActionBlockResponseDto,
 };
