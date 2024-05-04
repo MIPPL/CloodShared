@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SeachNodeRequestDto = exports.SingleNodeRequestDto = exports.UpdateNodeRequestDto = exports.ActionNodeResponseDto = exports.CreateNodeRequestDto = exports.NodeRecordDto = void 0;
+exports.DeleteNodeRequestDto = exports.SeachNodeRequestDto = exports.SingleNodeRequestDto = exports.UpdateNodeRequestDto = exports.ActionNodeResponseDto = exports.CreateNodeRequestDto = exports.NodeRecordDto = void 0;
 var class_validator_1 = require("class-validator");
 var NodeRecordDto = (function () {
     function NodeRecordDto() {
@@ -80,6 +80,21 @@ var SingleNodeRequestDto = (function () {
     return SingleNodeRequestDto;
 }());
 exports.SingleNodeRequestDto = SingleNodeRequestDto;
+var DeleteNodeRequestDto = (function () {
+    function DeleteNodeRequestDto() {
+    }
+    __decorate([
+        (0, class_validator_1.IsBoolean)(),
+        __metadata("design:type", Boolean)
+    ], DeleteNodeRequestDto.prototype, "trash_only", void 0);
+    __decorate([
+        (0, class_validator_1.IsBoolean)(),
+        (0, class_validator_1.IsOptional)(),
+        __metadata("design:type", Boolean)
+    ], DeleteNodeRequestDto.prototype, "recursive", void 0);
+    return DeleteNodeRequestDto;
+}());
+exports.DeleteNodeRequestDto = DeleteNodeRequestDto;
 var SeachNodeRequestDto = (function () {
     function SeachNodeRequestDto() {
     }

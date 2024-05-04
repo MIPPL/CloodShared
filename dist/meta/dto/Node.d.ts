@@ -31,9 +31,13 @@ declare class ActionNodeResponseDto {
 declare class SingleNodeRequestDto {
     recursive: boolean;
 }
+declare class DeleteNodeRequestDto {
+    trash_only: boolean;
+    recursive: boolean;
+}
 declare class SeachNodeRequestDto {
     name?: string;
     take?: number;
     skip?: number;
 }
-export { NodeRecordDto, CreateNodeRequestDto, ActionNodeResponseDto, UpdateNodeRequestDto, SingleNodeRequestDto, SeachNodeRequestDto, };
+export { NodeRecordDto, CreateNodeRequestDto, ActionNodeResponseDto, UpdateNodeRequestDto, SingleNodeRequestDto, SeachNodeRequestDto, DeleteNodeRequestDto, };

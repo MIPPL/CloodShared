@@ -17,4 +17,6 @@ declare class ActionFolderResponseDto extends ActionNodeResponseDto {
 }
 declare class SingleFolderRequestDto extends SingleNodeRequestDto {
 }
-export { FolderRecordDto, CreateFolderRequestDto, ActionFolderResponseDto, UpdateFolderRequestDto, SingleFolderRequestDto, ReadFolderRequestDto, };
+declare class DeleteFolderRequestDto extends SingleNodeRequestDto {
+}
+export { FolderRecordDto, CreateFolderRequestDto, ActionFolderResponseDto, UpdateFolderRequestDto, SingleFolderRequestDto, ReadFolderRequestDto, DeleteFolderRequestDto, };

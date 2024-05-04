@@ -94,5 +94,5 @@ export {
   UpdateNodeRequestDto,
   SingleNodeRequestDto,
   SeachNodeRequestDto,
-  DeleteNodeRequestDto
+  DeleteNodeRequestDto,
 };

@@ -24,7 +24,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActionFileResponseDto = exports.SingleFileRequestDto = exports.UpdateFileRequestDto = exports.CreateFileRequestDto = exports.FileRecordDto = void 0;
+exports.DeleteFileRequestDto = exports.ActionFileResponseDto = exports.SingleFileRequestDto = exports.UpdateFileRequestDto = exports.CreateFileRequestDto = exports.FileRecordDto = void 0;
 var class_validator_1 = require("class-validator");
 var Node_1 = require("./Node");
 var FileRecordDto = (function (_super) {
@@ -79,3 +79,11 @@ var ActionFileResponseDto = (function (_super) {
     return ActionFileResponseDto;
 }(Node_1.ActionNodeResponseDto));
 exports.ActionFileResponseDto = ActionFileResponseDto;
+var DeleteFileRequestDto = (function (_super) {
+    __extends(DeleteFileRequestDto, _super);
+    function DeleteFileRequestDto() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return DeleteFileRequestDto;
+}(Node_1.SingleNodeRequestDto));
+exports.DeleteFileRequestDto = DeleteFileRequestDto;

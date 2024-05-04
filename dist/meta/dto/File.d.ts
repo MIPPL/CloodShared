@@ -18,4 +18,6 @@ declare class SingleFileRequestDto extends SingleNodeRequestDto {
 }
 declare class ActionFileResponseDto extends ActionNodeResponseDto {
 }
-export { FileRecordDto, CreateFileRequestDto, UpdateFileRequestDto, SingleFileRequestDto, ActionFileResponseDto, };
+declare class DeleteFileRequestDto extends SingleNodeRequestDto {
+}
+export { FileRecordDto, CreateFileRequestDto, UpdateFileRequestDto, SingleFileRequestDto, ActionFileResponseDto, DeleteFileRequestDto, };
