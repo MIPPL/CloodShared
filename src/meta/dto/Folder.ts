@@ -2,6 +2,7 @@ import {
   ActionNodeResponseDto,
   CreateNodeRequestDto,
   NodeRecordDto,
+  SeachNodeRequestDto,
   SingleNodeRequestDto,
   UpdateNodeRequestDto,
 } from "./Node";
@@ -10,6 +11,12 @@ import { FileRecordDto } from "./File";
 class FolderRecordDto extends NodeRecordDto {
   child_folders?: FolderRecordDto[];
   child_files?: FileRecordDto[];
+}
+
+class ReadFolderRequestDto {
+  node_request: SingleNodeRequestDto;
+  folder_filter: SeachNodeRequestDto;
+  file_filter: SeachNodeRequestDto;
 }
 
 class CreateFolderRequestDto extends CreateNodeRequestDto {}
@@ -23,4 +30,5 @@ export {
   ActionFolderResponseDto,
   UpdateFolderRequestDto,
   SingleFolderRequestDto,
+  ReadFolderRequestDto
 };

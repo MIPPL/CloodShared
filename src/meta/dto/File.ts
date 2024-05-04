@@ -1,5 +1,6 @@
 import { IsString, IsNumber } from "class-validator";
 import {
+	ActionNodeResponseDto,
   CreateNodeRequestDto,
   NodeRecordDto,
   SingleNodeRequestDto,
@@ -28,10 +29,12 @@ class CreateFileRequestDto extends CreateNodeRequestDto {
 
 class UpdateFileRequestDto extends UpdateNodeRequestDto {}
 class SingleFileRequestDto extends SingleNodeRequestDto {}
+class ActionFileResponseDto extends ActionNodeResponseDto {}
 
 export {
   FileRecordDto,
   CreateFileRequestDto,
   UpdateFileRequestDto,
   SingleFileRequestDto,
+  ActionFileResponseDto
 };

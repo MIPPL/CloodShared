@@ -23,9 +23,6 @@ class CreateNodeRequestDto {
   @IsOptional()
   parent_id: number;
 
-  @IsNumber()
-  owner_id: number;
-
   @IsString()
   @IsNotEmpty()
   name: string;
@@ -37,7 +34,7 @@ class CreateNodeRequestDto {
 
 class UpdateNodeRequestDto {
   @IsNumber()
-  folder_id: number;
+  id_node: number;
 
   @IsNumber()
   @IsOptional()
@@ -53,7 +50,7 @@ class UpdateNodeRequestDto {
 }
 
 class ActionNodeResponseDto {
-  id_file: number;
+  id: number;
   error_code: string;
   error_message: string;
   name: string;
@@ -62,12 +59,23 @@ class ActionNodeResponseDto {
 }
 
 class SingleNodeRequestDto {
-  @IsNumber()
-  id_folder: number;
-
   @IsBoolean()
   @IsOptional()
   recursive: boolean;
+}
+
+class SeachNodeRequestDto {
+  @IsString()
+  @IsOptional()
+  name?: string;
+
+  @IsNumber()
+  @IsOptional()
+  take?: number;
+
+  @IsNumber()
+  @IsOptional()
+  skip?: number;
 }
 
 export {
@@ -76,4 +84,5 @@ export {
   ActionNodeResponseDto,
   UpdateNodeRequestDto,
   SingleNodeRequestDto,
+  SeachNodeRequestDto
 };
