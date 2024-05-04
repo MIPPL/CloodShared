@@ -7,16 +7,25 @@ import {
   UpdateNodeRequestDto,
 } from "./Node";
 import { FileRecordDto } from "./File";
+import { IsNumber, IsOptional, IsString } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {
   child_folders?: FolderRecordDto[];
   child_files?: FileRecordDto[];
 }
 
-class ReadFolderRequestDto {
-  node_request: SingleNodeRequestDto;
-  folder_filter: SeachNodeRequestDto;
-  file_filter: SeachNodeRequestDto;
+class ReadFolderRequestDto extends SeachNodeRequestDto {
+  @IsString()
+  @IsOptional()
+  name?: string;
+
+  @IsNumber()
+  @IsOptional()
+  take?: number;
+
+  @IsNumber()
+  @IsOptional()
+  skip?: number;
 }
 
 class CreateFolderRequestDto extends CreateNodeRequestDto {}

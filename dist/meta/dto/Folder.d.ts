@@ -4,10 +4,10 @@ declare class FolderRecordDto extends NodeRecordDto {
     child_folders?: FolderRecordDto[];
     child_files?: FileRecordDto[];
 }
-declare class ReadFolderRequestDto {
-    node_request: SingleNodeRequestDto;
-    folder_filter: SeachNodeRequestDto;
-    file_filter: SeachNodeRequestDto;
+declare class ReadFolderRequestDto extends SeachNodeRequestDto {
+    name?: string;
+    take?: number;
+    skip?: number;
 }
 declare class CreateFolderRequestDto extends CreateNodeRequestDto {
 }
