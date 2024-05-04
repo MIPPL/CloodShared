@@ -11,18 +11,17 @@ declare class NodeRecordDto {
 }
 declare class CreateNodeRequestDto {
     parent_id: number;
-    owner_id: number;
     name: string;
     auto_rename: boolean;
 }
 declare class UpdateNodeRequestDto {
-    folder_id: number;
+    id_node: number;
     parent_id: number;
     name: string;
     auto_rename: boolean;
 }
 declare class ActionNodeResponseDto {
-    id_file: number;
+    id: number;
     error_code: string;
     error_message: string;
     name: string;
@@ -30,7 +29,11 @@ declare class ActionNodeResponseDto {
     path_name: string;
 }
 declare class SingleNodeRequestDto {
-    id_folder: number;
     recursive: boolean;
 }
-export { NodeRecordDto, CreateNodeRequestDto, ActionNodeResponseDto, UpdateNodeRequestDto, SingleNodeRequestDto, };
+declare class SeachNodeRequestDto {
+    name?: string;
+    take?: number;
+    skip?: number;
+}
+export { NodeRecordDto, CreateNodeRequestDto, ActionNodeResponseDto, UpdateNodeRequestDto, SingleNodeRequestDto, SeachNodeRequestDto, };

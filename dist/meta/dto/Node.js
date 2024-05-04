@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SingleNodeRequestDto = exports.UpdateNodeRequestDto = exports.ActionNodeResponseDto = exports.CreateNodeRequestDto = exports.NodeRecordDto = void 0;
+exports.SeachNodeRequestDto = exports.SingleNodeRequestDto = exports.UpdateNodeRequestDto = exports.ActionNodeResponseDto = exports.CreateNodeRequestDto = exports.NodeRecordDto = void 0;
 var class_validator_1 = require("class-validator");
 var NodeRecordDto = (function () {
     function NodeRecordDto() {
@@ -25,10 +25,6 @@ var CreateNodeRequestDto = (function () {
         (0, class_validator_1.IsOptional)(),
         __metadata("design:type", Number)
     ], CreateNodeRequestDto.prototype, "parent_id", void 0);
-    __decorate([
-        (0, class_validator_1.IsNumber)(),
-        __metadata("design:type", Number)
-    ], CreateNodeRequestDto.prototype, "owner_id", void 0);
     __decorate([
         (0, class_validator_1.IsString)(),
         (0, class_validator_1.IsNotEmpty)(),
@@ -48,7 +44,7 @@ var UpdateNodeRequestDto = (function () {
     __decorate([
         (0, class_validator_1.IsNumber)(),
         __metadata("design:type", Number)
-    ], UpdateNodeRequestDto.prototype, "folder_id", void 0);
+    ], UpdateNodeRequestDto.prototype, "id_node", void 0);
     __decorate([
         (0, class_validator_1.IsNumber)(),
         (0, class_validator_1.IsOptional)(),
@@ -77,10 +73,6 @@ var SingleNodeRequestDto = (function () {
     function SingleNodeRequestDto() {
     }
     __decorate([
-        (0, class_validator_1.IsNumber)(),
-        __metadata("design:type", Number)
-    ], SingleNodeRequestDto.prototype, "id_folder", void 0);
-    __decorate([
         (0, class_validator_1.IsBoolean)(),
         (0, class_validator_1.IsOptional)(),
         __metadata("design:type", Boolean)
@@ -88,3 +80,24 @@ var SingleNodeRequestDto = (function () {
     return SingleNodeRequestDto;
 }());
 exports.SingleNodeRequestDto = SingleNodeRequestDto;
+var SeachNodeRequestDto = (function () {
+    function SeachNodeRequestDto() {
+    }
+    __decorate([
+        (0, class_validator_1.IsString)(),
+        (0, class_validator_1.IsOptional)(),
+        __metadata("design:type", String)
+    ], SeachNodeRequestDto.prototype, "name", void 0);
+    __decorate([
+        (0, class_validator_1.IsNumber)(),
+        (0, class_validator_1.IsOptional)(),
+        __metadata("design:type", Number)
+    ], SeachNodeRequestDto.prototype, "take", void 0);
+    __decorate([
+        (0, class_validator_1.IsNumber)(),
+        (0, class_validator_1.IsOptional)(),
+        __metadata("design:type", Number)
+    ], SeachNodeRequestDto.prototype, "skip", void 0);
+    return SeachNodeRequestDto;
+}());
+exports.SeachNodeRequestDto = SeachNodeRequestDto;

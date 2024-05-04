@@ -30,5 +30,5 @@ export {
   ActionFolderResponseDto,
   UpdateFolderRequestDto,
   SingleFolderRequestDto,
-  ReadFolderRequestDto
+  ReadFolderRequestDto,
 };

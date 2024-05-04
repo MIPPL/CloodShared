@@ -1,4 +1,4 @@
-import { CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
+import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
 declare class FileRecordDto extends NodeRecordDto {
     size_bytes: number;
     hash: string;
@@ -16,4 +16,6 @@ declare class UpdateFileRequestDto extends UpdateNodeRequestDto {
 }
 declare class SingleFileRequestDto extends SingleNodeRequestDto {
 }
-export { FileRecordDto, CreateFileRequestDto, UpdateFileRequestDto, SingleFileRequestDto, };
+declare class ActionFileResponseDto extends ActionNodeResponseDto {
+}
+export { FileRecordDto, CreateFileRequestDto, UpdateFileRequestDto, SingleFileRequestDto, ActionFileResponseDto, };

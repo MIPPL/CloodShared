@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SingleFolderRequestDto = exports.UpdateFolderRequestDto = exports.ActionFolderResponseDto = exports.CreateFolderRequestDto = exports.FolderRecordDto = void 0;
+exports.ReadFolderRequestDto = exports.SingleFolderRequestDto = exports.UpdateFolderRequestDto = exports.ActionFolderResponseDto = exports.CreateFolderRequestDto = exports.FolderRecordDto = void 0;
 var Node_1 = require("./Node");
 var FolderRecordDto = (function (_super) {
     __extends(FolderRecordDto, _super);
@@ -25,6 +25,12 @@ var FolderRecordDto = (function (_super) {
     return FolderRecordDto;
 }(Node_1.NodeRecordDto));
 exports.FolderRecordDto = FolderRecordDto;
+var ReadFolderRequestDto = (function () {
+    function ReadFolderRequestDto() {
+    }
+    return ReadFolderRequestDto;
+}());
+exports.ReadFolderRequestDto = ReadFolderRequestDto;
 var CreateFolderRequestDto = (function (_super) {
     __extends(CreateFolderRequestDto, _super);
     function CreateFolderRequestDto() {

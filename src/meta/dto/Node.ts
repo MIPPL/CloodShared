@@ -84,5 +84,5 @@ export {
   ActionNodeResponseDto,
   UpdateNodeRequestDto,
   SingleNodeRequestDto,
-  SeachNodeRequestDto
+  SeachNodeRequestDto,
 };
