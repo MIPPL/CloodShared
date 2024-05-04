@@ -64,6 +64,15 @@ class SingleNodeRequestDto {
   recursive: boolean;
 }
 
+class DeleteNodeRequestDto {
+  @IsBoolean()
+  trash_only: boolean;
+
+  @IsBoolean()
+  @IsOptional()
+  recursive: boolean;
+}
+
 class SeachNodeRequestDto {
   @IsString()
   @IsOptional()
@@ -85,4 +94,5 @@ export {
   UpdateNodeRequestDto,
   SingleNodeRequestDto,
   SeachNodeRequestDto,
+  DeleteNodeRequestDto
 };

@@ -30,6 +30,7 @@ class CreateFileRequestDto extends CreateNodeRequestDto {
 class UpdateFileRequestDto extends UpdateNodeRequestDto {}
 class SingleFileRequestDto extends SingleNodeRequestDto {}
 class ActionFileResponseDto extends ActionNodeResponseDto {}
+class DeleteFileRequestDto extends SingleNodeRequestDto {}
 
 export {
   FileRecordDto,
@@ -37,4 +38,5 @@ export {
   UpdateFileRequestDto,
   SingleFileRequestDto,
   ActionFileResponseDto,
+  DeleteFileRequestDto,
 };

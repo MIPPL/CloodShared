@@ -32,6 +32,7 @@ class CreateFolderRequestDto extends CreateNodeRequestDto {}
 class UpdateFolderRequestDto extends UpdateNodeRequestDto {}
 class ActionFolderResponseDto extends ActionNodeResponseDto {}
 class SingleFolderRequestDto extends SingleNodeRequestDto {}
+class DeleteFolderRequestDto extends SingleNodeRequestDto {}
 
 export {
   FolderRecordDto,
@@ -40,4 +41,5 @@ export {
   UpdateFolderRequestDto,
   SingleFolderRequestDto,
   ReadFolderRequestDto,
+  DeleteFolderRequestDto,
 };
