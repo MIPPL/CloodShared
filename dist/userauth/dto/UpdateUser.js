@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateUserRequestDto = void 0;
 var class_validator_1 = require("class-validator");
+var match_1 = require("../../decorator/match");
 var UpdateUserRequestDto = (function () {
     function UpdateUserRequestDto() {
     }
@@ -48,6 +49,12 @@ var UpdateUserRequestDto = (function () {
         (0, class_validator_1.IsOptional)(),
         __metadata("design:type", String)
     ], UpdateUserRequestDto.prototype, "password", void 0);
+    __decorate([
+        (0, match_1.Match)("password"),
+        (0, class_validator_1.IsOptional)(),
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], UpdateUserRequestDto.prototype, "confirm_password", void 0);
     return UpdateUserRequestDto;
 }());
 exports.UpdateUserRequestDto = UpdateUserRequestDto;
