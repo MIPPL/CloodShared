@@ -4,7 +4,9 @@ import {
   IsEmail,
   IsPhoneNumber,
   IsNumberString,
+  IsNotEmpty,
 } from "class-validator";
+import { Match } from "../../decorator/match";
 
 class UpdateUserRequestDto {
   @IsNumberString()
@@ -33,6 +35,11 @@ class UpdateUserRequestDto {
   @IsString()
   @IsOptional()
   password: string;
+
+  @Match("password")
+  @IsOptional()
+  @IsString()
+  confirm_password: string;
 }
 
 export { UpdateUserRequestDto };
