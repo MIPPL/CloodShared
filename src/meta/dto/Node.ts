@@ -14,7 +14,6 @@ class NodeRecordDto {
   path: string;
   created_at: Date;
   modified_at: Date;
-  path_name: string;
   deleted_at: Date;
 }
 
@@ -50,12 +49,11 @@ class UpdateNodeRequestDto {
 }
 
 class ActionNodeResponseDto {
-  id: number;
+  id_node: number;
   error_code: string;
   error_message: string;
   name: string;
   path: string;
-  path_name: string;
 }
 
 class SingleNodeRequestDto {
