@@ -1,7 +1,6 @@
 import {
   ActionNodeResponseDto,
   CreateNodeRequestDto,
-  DeleteNodeRequestDto,
   NodeRecordDto,
   SeachNodeRequestDto,
   SingleNodeRequestDto,
