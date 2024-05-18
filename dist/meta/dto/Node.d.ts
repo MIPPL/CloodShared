@@ -6,7 +6,6 @@ declare class NodeRecordDto {
     path: string;
     created_at: Date;
     modified_at: Date;
-    path_name: string;
     deleted_at: Date;
 }
 declare class CreateNodeRequestDto {
@@ -21,12 +20,11 @@ declare class UpdateNodeRequestDto {
     auto_rename: boolean;
 }
 declare class ActionNodeResponseDto {
-    id: number;
+    id_node: number;
     error_code: string;
     error_message: string;
     name: string;
     path: string;
-    path_name: string;
 }
 declare class SingleNodeRequestDto {
     recursive: boolean;
