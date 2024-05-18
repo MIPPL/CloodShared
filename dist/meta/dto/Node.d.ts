@@ -27,9 +27,11 @@ declare class ActionNodeResponseDto {
     path: string;
 }
 declare class SingleNodeRequestDto {
+    id: string;
     recursive: boolean;
 }
 declare class DeleteNodeRequestDto {
+    id: string;
     trash_only: boolean;
     recursive: boolean;
 }

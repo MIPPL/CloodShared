@@ -58,8 +58,8 @@ class ActionNodeResponseDto {
 }
 
 class SingleNodeRequestDto {
-	@IsNumberString()
-	id: string;
+  @IsNumberString()
+  id: string;
 
   @IsBoolean()
   @IsOptional()

@@ -90,11 +90,17 @@ var SingleFolderRequestDto = (function (_super) {
     return SingleFolderRequestDto;
 }(Node_1.SingleNodeRequestDto));
 exports.SingleFolderRequestDto = SingleFolderRequestDto;
-var DeleteFolderRequestDto = (function (_super) {
-    __extends(DeleteFolderRequestDto, _super);
+var DeleteFolderRequestDto = (function () {
     function DeleteFolderRequestDto() {
-        return _super !== null && _super.apply(this, arguments) || this;
     }
+    __decorate([
+        (0, class_validator_1.IsNumberString)(),
+        __metadata("design:type", String)
+    ], DeleteFolderRequestDto.prototype, "id", void 0);
+    __decorate([
+        (0, class_validator_1.IsBoolean)(),
+        __metadata("design:type", Boolean)
+    ], DeleteFolderRequestDto.prototype, "trash_only", void 0);
     return DeleteFolderRequestDto;
-}(Node_1.SingleNodeRequestDto));
+}());
 exports.DeleteFolderRequestDto = DeleteFolderRequestDto;

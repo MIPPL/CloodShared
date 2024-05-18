@@ -73,6 +73,10 @@ var SingleNodeRequestDto = (function () {
     function SingleNodeRequestDto() {
     }
     __decorate([
+        (0, class_validator_1.IsNumberString)(),
+        __metadata("design:type", String)
+    ], SingleNodeRequestDto.prototype, "id", void 0);
+    __decorate([
         (0, class_validator_1.IsBoolean)(),
         (0, class_validator_1.IsOptional)(),
         __metadata("design:type", Boolean)
@@ -83,6 +87,10 @@ exports.SingleNodeRequestDto = SingleNodeRequestDto;
 var DeleteNodeRequestDto = (function () {
     function DeleteNodeRequestDto() {
     }
+    __decorate([
+        (0, class_validator_1.IsNumberString)(),
+        __metadata("design:type", String)
+    ], DeleteNodeRequestDto.prototype, "id", void 0);
     __decorate([
         (0, class_validator_1.IsBoolean)(),
         __metadata("design:type", Boolean)

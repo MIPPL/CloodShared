@@ -17,6 +17,8 @@ declare class ActionFolderResponseDto extends ActionNodeResponseDto {
 }
 declare class SingleFolderRequestDto extends SingleNodeRequestDto {
 }
-declare class DeleteFolderRequestDto extends SingleNodeRequestDto {
+declare class DeleteFolderRequestDto {
+    id: string;
+    trash_only: boolean;
 }
 export { FolderRecordDto, CreateFolderRequestDto, ActionFolderResponseDto, UpdateFolderRequestDto, SingleFolderRequestDto, ReadFolderRequestDto, DeleteFolderRequestDto, };
