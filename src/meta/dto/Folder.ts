@@ -1,13 +1,14 @@
 import {
   ActionNodeResponseDto,
   CreateNodeRequestDto,
+  DeleteNodeRequestDto,
   NodeRecordDto,
   SeachNodeRequestDto,
   SingleNodeRequestDto,
   UpdateNodeRequestDto,
 } from "./Node";
 import { FileRecordDto } from "./File";
-import { IsNumber, IsOptional, IsString } from "class-validator";
+import { IsBoolean, IsNumber, IsNumberString, IsOptional, IsString } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {
   child_folders?: FolderRecordDto[];
@@ -32,7 +33,13 @@ class CreateFolderRequestDto extends CreateNodeRequestDto {}
 class UpdateFolderRequestDto extends UpdateNodeRequestDto {}
 class ActionFolderResponseDto extends ActionNodeResponseDto {}
 class SingleFolderRequestDto extends SingleNodeRequestDto {}
-class DeleteFolderRequestDto extends SingleNodeRequestDto {}
+class DeleteFolderRequestDto {
+	@IsNumberString()
+	id: string;
+
+	@IsBoolean()
+	trash_only: boolean;  
+}
 
 export {
   FolderRecordDto,

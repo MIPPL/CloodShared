@@ -4,6 +4,7 @@ import {
   IsNumber,
   IsOptional,
   IsBoolean,
+  IsNumberString,
 } from "class-validator";
 
 class NodeRecordDto {
@@ -57,12 +58,18 @@ class ActionNodeResponseDto {
 }
 
 class SingleNodeRequestDto {
+	@IsNumberString()
+	id: string;
+
   @IsBoolean()
   @IsOptional()
   recursive: boolean;
 }
 
 class DeleteNodeRequestDto {
+  @IsNumberString()
+  id: string;
+
   @IsBoolean()
   trash_only: boolean;
 
