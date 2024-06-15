@@ -4,12 +4,12 @@ import {
   IsNumber,
   IsOptional,
   IsBoolean,
-  IsNumberString,
+  IsHexadecimal
 } from "class-validator";
 
 class NodeRecordDto {
-  id: number;
-  parent_id: number;
+  id: string;
+  parent_id: string;
   owner_id: number;
   name: string;
   path: string;
@@ -19,7 +19,7 @@ class NodeRecordDto {
 }
 
 class CreateNodeRequestDto {
-  @IsNumber()
+  @IsHexadecimal()
   @IsOptional()
   parent_id: number;
 
@@ -33,10 +33,10 @@ class CreateNodeRequestDto {
 }
 
 class UpdateNodeRequestDto {
-  @IsNumber()
+  @IsHexadecimal()
   id_node: number;
 
-  @IsNumber()
+  @IsHexadecimal()
   @IsOptional()
   parent_id: number;
 
@@ -50,7 +50,7 @@ class UpdateNodeRequestDto {
 }
 
 class ActionNodeResponseDto {
-  id_node: number;
+  id_node: string;
   error_code: string;
   error_message: string;
   name: string;
@@ -58,7 +58,7 @@ class ActionNodeResponseDto {
 }
 
 class SingleNodeRequestDto {
-  @IsNumberString()
+  @IsHexadecimal()
   id: string;
 
   @IsBoolean()
@@ -67,7 +67,7 @@ class SingleNodeRequestDto {
 }
 
 class DeleteNodeRequestDto {
-  @IsNumberString()
+  @IsHexadecimal()
   id: string;
 
   @IsBoolean()

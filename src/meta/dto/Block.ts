@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, IsNumber } from "class-validator";
+import { IsString, IsNotEmpty, IsNumber, IsHexadecimal } from "class-validator";
 
 class BlockRecordDto {
   id_block: number;
@@ -8,14 +8,14 @@ class BlockRecordDto {
 }
 
 class FileBlockRecordDto extends BlockRecordDto {
-  id_file: number;
+  id_file: string;
   id_block: number;
   order: number;
 }
 
 class CreateFileBlockRequestDto {
-  @IsNumber()
-  id_file: number;
+  @IsHexadecimal()
+  id_file: string;
 
   @IsNumber()
   order: number;

@@ -10,9 +10,9 @@ import { FileRecordDto } from "./File";
 import {
   IsBoolean,
   IsNumber,
-  IsNumberString,
   IsOptional,
   IsString,
+  IsHexadecimal
 } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {
@@ -39,7 +39,7 @@ class UpdateFolderRequestDto extends UpdateNodeRequestDto {}
 class ActionFolderResponseDto extends ActionNodeResponseDto {}
 class SingleFolderRequestDto extends SingleNodeRequestDto {}
 class DeleteFolderRequestDto {
-  @IsNumberString()
+  @IsHexadecimal()
   id: string;
 
   @IsBoolean()
