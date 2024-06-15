@@ -12,7 +12,7 @@ import {
   IsNumber,
   IsOptional,
   IsString,
-  IsHexadecimal
+  IsHexadecimal,
 } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {

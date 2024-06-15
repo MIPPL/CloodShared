@@ -44,8 +44,8 @@ var CreateFileBlockRequestDto = (function () {
     function CreateFileBlockRequestDto() {
     }
     __decorate([
-        (0, class_validator_1.IsNumber)(),
-        __metadata("design:type", Number)
+        (0, class_validator_1.IsHexadecimal)(),
+        __metadata("design:type", String)
     ], CreateFileBlockRequestDto.prototype, "id_file", void 0);
     __decorate([
         (0, class_validator_1.IsNumber)(),

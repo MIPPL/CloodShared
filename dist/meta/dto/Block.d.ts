@@ -5,12 +5,12 @@ declare class BlockRecordDto {
     uploaded_bytes: number;
 }
 declare class FileBlockRecordDto extends BlockRecordDto {
-    id_file: number;
+    id_file: string;
     id_block: number;
     order: number;
 }
 declare class CreateFileBlockRequestDto {
-    id_file: number;
+    id_file: string;
     order: number;
     size_bytes: number;
     hash: string;

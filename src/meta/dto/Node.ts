@@ -4,7 +4,7 @@ import {
   IsNumber,
   IsOptional,
   IsBoolean,
-  IsHexadecimal
+  IsHexadecimal,
 } from "class-validator";
 
 class NodeRecordDto {

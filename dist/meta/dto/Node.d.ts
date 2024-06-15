@@ -1,6 +1,6 @@
 declare class NodeRecordDto {
-    id: number;
-    parent_id: number;
+    id: string;
+    parent_id: string;
     owner_id: number;
     name: string;
     path: string;
@@ -20,7 +20,7 @@ declare class UpdateNodeRequestDto {
     auto_rename: boolean;
 }
 declare class ActionNodeResponseDto {
-    id_node: number;
+    id_node: string;
     error_code: string;
     error_message: string;
     name: string;

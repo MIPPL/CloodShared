@@ -94,7 +94,7 @@ var DeleteFolderRequestDto = (function () {
     function DeleteFolderRequestDto() {
     }
     __decorate([
-        (0, class_validator_1.IsNumberString)(),
+        (0, class_validator_1.IsHexadecimal)(),
         __metadata("design:type", String)
     ], DeleteFolderRequestDto.prototype, "id", void 0);
     __decorate([
