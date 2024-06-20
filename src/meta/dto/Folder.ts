@@ -2,17 +2,15 @@ import {
   ActionNodeResponseDto,
   CreateNodeRequestDto,
   NodeRecordDto,
-  SeachNodeRequestDto,
   SingleNodeRequestDto,
   UpdateNodeRequestDto,
+  SeachNodeRequestDto
 } from "./Node";
 import { FileRecordDto } from "./File";
 import {
   IsBoolean,
-  IsNumber,
   IsOptional,
-  IsString,
-  IsHexadecimal,
+  IsHexadecimal
 } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {
@@ -21,17 +19,12 @@ class FolderRecordDto extends NodeRecordDto {
 }
 
 class ReadFolderRequestDto extends SeachNodeRequestDto {
-  @IsString()
-  @IsOptional()
-  name?: string;
+  @IsHexadecimal()
+  id: string;
 
-  @IsNumber()
+  @IsBoolean()
   @IsOptional()
-  take?: number;
-
-  @IsNumber()
-  @IsOptional()
-  skip?: number;
+  recursive?: boolean;
 }
 
 class CreateFolderRequestDto extends CreateNodeRequestDto {}
