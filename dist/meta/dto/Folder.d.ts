@@ -1,13 +1,12 @@
-import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SeachNodeRequestDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
+import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto, SeachNodeRequestDto } from "./Node";
 import { FileRecordDto } from "./File";
 declare class FolderRecordDto extends NodeRecordDto {
     child_folders?: FolderRecordDto[];
     child_files?: FileRecordDto[];
 }
 declare class ReadFolderRequestDto extends SeachNodeRequestDto {
-    name?: string;
-    take?: number;
-    skip?: number;
+    id: string;
+    recursive?: boolean;
 }
 declare class CreateFolderRequestDto extends CreateNodeRequestDto {
 }

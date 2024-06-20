@@ -41,20 +41,14 @@ var ReadFolderRequestDto = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        (0, class_validator_1.IsString)(),
-        (0, class_validator_1.IsOptional)(),
+        (0, class_validator_1.IsHexadecimal)(),
         __metadata("design:type", String)
-    ], ReadFolderRequestDto.prototype, "name", void 0);
+    ], ReadFolderRequestDto.prototype, "id", void 0);
     __decorate([
-        (0, class_validator_1.IsNumber)(),
+        (0, class_validator_1.IsBoolean)(),
         (0, class_validator_1.IsOptional)(),
-        __metadata("design:type", Number)
-    ], ReadFolderRequestDto.prototype, "take", void 0);
-    __decorate([
-        (0, class_validator_1.IsNumber)(),
-        (0, class_validator_1.IsOptional)(),
-        __metadata("design:type", Number)
-    ], ReadFolderRequestDto.prototype, "skip", void 0);
+        __metadata("design:type", Boolean)
+    ], ReadFolderRequestDto.prototype, "recursive", void 0);
     return ReadFolderRequestDto;
 }(Node_1.SeachNodeRequestDto));
 exports.ReadFolderRequestDto = ReadFolderRequestDto;

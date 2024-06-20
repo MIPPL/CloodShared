@@ -4,14 +4,10 @@ import {
   NodeRecordDto,
   SingleNodeRequestDto,
   UpdateNodeRequestDto,
-  SeachNodeRequestDto
+  SeachNodeRequestDto,
 } from "./Node";
 import { FileRecordDto } from "./File";
-import {
-  IsBoolean,
-  IsOptional,
-  IsHexadecimal
-} from "class-validator";
+import { IsBoolean, IsOptional, IsHexadecimal } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {
   child_folders?: FolderRecordDto[];
