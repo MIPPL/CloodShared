@@ -77,7 +77,7 @@ var SingleNodeRequestDto = (function () {
         __metadata("design:type", String)
     ], SingleNodeRequestDto.prototype, "id", void 0);
     __decorate([
-        (0, class_validator_1.IsBoolean)(),
+        (0, class_validator_1.IsBooleanString)(),
         (0, class_validator_1.IsOptional)(),
         __metadata("design:type", Boolean)
     ], SingleNodeRequestDto.prototype, "recursive", void 0);

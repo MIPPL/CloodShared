@@ -45,7 +45,7 @@ var ReadFolderRequestDto = (function (_super) {
         __metadata("design:type", String)
     ], ReadFolderRequestDto.prototype, "id", void 0);
     __decorate([
-        (0, class_validator_1.IsBoolean)(),
+        (0, class_validator_1.IsBooleanString)(),
         (0, class_validator_1.IsOptional)(),
         __metadata("design:type", Boolean)
     ], ReadFolderRequestDto.prototype, "recursive", void 0);
@@ -92,7 +92,7 @@ var DeleteFolderRequestDto = (function () {
         __metadata("design:type", String)
     ], DeleteFolderRequestDto.prototype, "id", void 0);
     __decorate([
-        (0, class_validator_1.IsBoolean)(),
+        (0, class_validator_1.IsBooleanString)(),
         __metadata("design:type", Boolean)
     ], DeleteFolderRequestDto.prototype, "trash_only", void 0);
     return DeleteFolderRequestDto;
