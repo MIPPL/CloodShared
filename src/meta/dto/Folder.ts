@@ -7,7 +7,7 @@ import {
   SeachNodeRequestDto,
 } from "./Node";
 import { FileRecordDto } from "./File";
-import { IsBoolean, IsOptional, IsHexadecimal } from "class-validator";
+import { IsOptional, IsHexadecimal, IsBooleanString } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {
   child_folders?: FolderRecordDto[];
@@ -18,7 +18,7 @@ class ReadFolderRequestDto extends SeachNodeRequestDto {
   @IsHexadecimal()
   id: string;
 
-  @IsBoolean()
+  @IsBooleanString()
   @IsOptional()
   recursive?: boolean;
 }
@@ -31,7 +31,7 @@ class DeleteFolderRequestDto {
   @IsHexadecimal()
   id: string;
 
-  @IsBoolean()
+  @IsBooleanString()
   trash_only: boolean;
 }
 

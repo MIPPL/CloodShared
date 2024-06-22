@@ -5,6 +5,7 @@ import {
   IsOptional,
   IsBoolean,
   IsHexadecimal,
+  IsBooleanString,
 } from "class-validator";
 
 class NodeRecordDto {
@@ -61,7 +62,7 @@ class SingleNodeRequestDto {
   @IsHexadecimal()
   id: string;
 
-  @IsBoolean()
+  @IsBooleanString()
   @IsOptional()
   recursive: boolean;
 }
