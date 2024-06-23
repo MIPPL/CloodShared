@@ -22,7 +22,7 @@ class NodeRecordDto {
 class CreateNodeRequestDto {
   @IsHexadecimal()
   @IsOptional()
-  parent_id: number;
+  parent_id: string;
 
   @IsString()
   @IsNotEmpty()
@@ -35,11 +35,11 @@ class CreateNodeRequestDto {
 
 class UpdateNodeRequestDto {
   @IsHexadecimal()
-  id_node: number;
+  id_node: string;
 
   @IsHexadecimal()
   @IsOptional()
-  parent_id: number;
+  parent_id: string;
 
   @IsString()
   @IsNotEmpty()
