@@ -1,4 +1,4 @@
-import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto, SeachNodeRequestDto } from "./Node";
+import { ActionNodeResponseDto, CreateNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto, SeachNodeRequestDto, DeleteNodeRequestDto } from "./Node";
 import { FileRecordDto } from "./File";
 declare class FolderRecordDto extends NodeRecordDto {
     child_folders?: FolderRecordDto[];
@@ -16,8 +16,7 @@ declare class ActionFolderResponseDto extends ActionNodeResponseDto {
 }
 declare class SingleFolderRequestDto extends SingleNodeRequestDto {
 }
-declare class DeleteFolderRequestDto {
-    id: string;
-    trash_only: boolean;
+declare class DeleteFolderRequestDto extends DeleteNodeRequestDto {
+    recursive: boolean;
 }
 export { FolderRecordDto, CreateFolderRequestDto, ActionFolderResponseDto, UpdateFolderRequestDto, SingleFolderRequestDto, ReadFolderRequestDto, DeleteFolderRequestDto, };

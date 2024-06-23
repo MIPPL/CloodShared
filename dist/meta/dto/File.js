@@ -85,5 +85,5 @@ var DeleteFileRequestDto = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return DeleteFileRequestDto;
-}(Node_1.SingleNodeRequestDto));
+}(Node_1.DeleteNodeRequestDto));
 exports.DeleteFileRequestDto = DeleteFileRequestDto;

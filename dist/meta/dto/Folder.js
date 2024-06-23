@@ -84,17 +84,15 @@ var SingleFolderRequestDto = (function (_super) {
     return SingleFolderRequestDto;
 }(Node_1.SingleNodeRequestDto));
 exports.SingleFolderRequestDto = SingleFolderRequestDto;
-var DeleteFolderRequestDto = (function () {
+var DeleteFolderRequestDto = (function (_super) {
+    __extends(DeleteFolderRequestDto, _super);
     function DeleteFolderRequestDto() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        (0, class_validator_1.IsHexadecimal)(),
-        __metadata("design:type", String)
-    ], DeleteFolderRequestDto.prototype, "id", void 0);
-    __decorate([
-        (0, class_validator_1.IsBooleanString)(),
+        (0, class_validator_1.IsBoolean)(),
         __metadata("design:type", Boolean)
-    ], DeleteFolderRequestDto.prototype, "trash_only", void 0);
+    ], DeleteFolderRequestDto.prototype, "recursive", void 0);
     return DeleteFolderRequestDto;
-}());
+}(Node_1.DeleteNodeRequestDto));
 exports.DeleteFolderRequestDto = DeleteFolderRequestDto;

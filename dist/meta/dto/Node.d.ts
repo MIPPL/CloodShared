@@ -33,7 +33,6 @@ declare class SingleNodeRequestDto {
 declare class DeleteNodeRequestDto {
     id: string;
     trash_only: boolean;
-    recursive: boolean;
 }
 declare class SeachNodeRequestDto {
     name?: string;

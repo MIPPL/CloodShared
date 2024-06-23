@@ -95,11 +95,6 @@ var DeleteNodeRequestDto = (function () {
         (0, class_validator_1.IsBoolean)(),
         __metadata("design:type", Boolean)
     ], DeleteNodeRequestDto.prototype, "trash_only", void 0);
-    __decorate([
-        (0, class_validator_1.IsBoolean)(),
-        (0, class_validator_1.IsOptional)(),
-        __metadata("design:type", Boolean)
-    ], DeleteNodeRequestDto.prototype, "recursive", void 0);
     return DeleteNodeRequestDto;
 }());
 exports.DeleteNodeRequestDto = DeleteNodeRequestDto;
