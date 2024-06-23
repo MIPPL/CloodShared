@@ -23,7 +23,7 @@ var CreateNodeRequestDto = (function () {
     __decorate([
         (0, class_validator_1.IsHexadecimal)(),
         (0, class_validator_1.IsOptional)(),
-        __metadata("design:type", Number)
+        __metadata("design:type", String)
     ], CreateNodeRequestDto.prototype, "parent_id", void 0);
     __decorate([
         (0, class_validator_1.IsString)(),
@@ -43,12 +43,12 @@ var UpdateNodeRequestDto = (function () {
     }
     __decorate([
         (0, class_validator_1.IsHexadecimal)(),
-        __metadata("design:type", Number)
+        __metadata("design:type", String)
     ], UpdateNodeRequestDto.prototype, "id_node", void 0);
     __decorate([
         (0, class_validator_1.IsHexadecimal)(),
         (0, class_validator_1.IsOptional)(),
-        __metadata("design:type", Number)
+        __metadata("design:type", String)
     ], UpdateNodeRequestDto.prototype, "parent_id", void 0);
     __decorate([
         (0, class_validator_1.IsString)(),

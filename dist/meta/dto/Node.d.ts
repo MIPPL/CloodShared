@@ -9,13 +9,13 @@ declare class NodeRecordDto {
     deleted_at: Date;
 }
 declare class CreateNodeRequestDto {
-    parent_id: number;
+    parent_id: string;
     name: string;
     auto_rename: boolean;
 }
 declare class UpdateNodeRequestDto {
-    id_node: number;
-    parent_id: number;
+    id_node: string;
+    parent_id: string;
     name: string;
     auto_rename: boolean;
 }
