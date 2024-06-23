@@ -42,7 +42,7 @@ class UpdateNodeRequestDto {
   parent_id: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   name: string;
 
   @IsBoolean()
