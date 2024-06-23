@@ -2,6 +2,7 @@ import { IsString, IsNumber } from "class-validator";
 import {
   ActionNodeResponseDto,
   CreateNodeRequestDto,
+  DeleteNodeRequestDto,
   NodeRecordDto,
   SingleNodeRequestDto,
   UpdateNodeRequestDto,
@@ -30,7 +31,7 @@ class CreateFileRequestDto extends CreateNodeRequestDto {
 class UpdateFileRequestDto extends UpdateNodeRequestDto {}
 class SingleFileRequestDto extends SingleNodeRequestDto {}
 class ActionFileResponseDto extends ActionNodeResponseDto {}
-class DeleteFileRequestDto extends SingleNodeRequestDto {}
+class DeleteFileRequestDto extends DeleteNodeRequestDto {}
 
 export {
   FileRecordDto,

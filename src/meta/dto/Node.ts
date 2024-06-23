@@ -73,10 +73,6 @@ class DeleteNodeRequestDto {
 
   @IsBoolean()
   trash_only: boolean;
-
-  @IsBoolean()
-  @IsOptional()
-  recursive: boolean;
 }
 
 class SeachNodeRequestDto {

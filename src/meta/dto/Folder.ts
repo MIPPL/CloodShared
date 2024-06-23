@@ -5,9 +5,10 @@ import {
   SingleNodeRequestDto,
   UpdateNodeRequestDto,
   SeachNodeRequestDto,
+  DeleteNodeRequestDto,
 } from "./Node";
 import { FileRecordDto } from "./File";
-import { IsOptional, IsHexadecimal, IsBooleanString } from "class-validator";
+import { IsOptional, IsHexadecimal, IsBooleanString, IsBoolean } from "class-validator";
 
 class FolderRecordDto extends NodeRecordDto {
   child_folders?: FolderRecordDto[];
@@ -27,12 +28,9 @@ class CreateFolderRequestDto extends CreateNodeRequestDto {}
 class UpdateFolderRequestDto extends UpdateNodeRequestDto {}
 class ActionFolderResponseDto extends ActionNodeResponseDto {}
 class SingleFolderRequestDto extends SingleNodeRequestDto {}
-class DeleteFolderRequestDto {
-  @IsHexadecimal()
-  id: string;
-
-  @IsBooleanString()
-  trash_only: boolean;
+class DeleteFolderRequestDto extends DeleteNodeRequestDto {
+	@IsBoolean()
+	recursive: boolean;
 }
 
 export {
