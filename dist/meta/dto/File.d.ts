@@ -1,11 +1,11 @@
 import { ActionNodeResponseDto, CreateNodeRequestDto, DeleteNodeRequestDto, NodeRecordDto, SingleNodeRequestDto, UpdateNodeRequestDto } from "./Node";
 declare class FileRecordDto extends NodeRecordDto {
-    size_bytes: number;
+    sizeBytes: number;
     hash: string;
     extension: string;
-    mime_type: string;
-    total_blocks: number;
-    uploaded_blocks: number;
+    mimeType: string;
+    totalBlocks: number;
+    uploadedBlocks: number;
 }
 declare class CreateFileRequestDto extends CreateNodeRequestDto {
     extension: string;

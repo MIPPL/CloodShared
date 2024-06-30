@@ -1,12 +1,12 @@
 declare class NodeRecordDto {
     id: string;
-    parent_id: string;
-    owner_id: number;
+    parentId: string;
+    ownerId: number;
     name: string;
     path: string;
-    created_at: Date;
-    modified_at: Date;
-    deleted_at: Date;
+    createdAt: Date;
+    modifiedAt: Date;
+    deletedAt: Date;
 }
 declare class CreateNodeRequestDto {
     parent_id: string;
